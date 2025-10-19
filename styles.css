@@ -1,12 +1,120 @@
 body {
-  background-image: url("./assets/img/backIntro.jpg");
-  
+  background-image: url("./assets/img/backIntro2.png");
+  background-repeat: repeat;
+  background-size: auto;
+  animation: backgroundDefilement 30s linear infinite;
+
 }
 
+.share-tech-regular {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@keyframes backgroundDefilement {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 1000px -1000px;
+  }
+}
 
 p {
-  font-size: 1em;
+  font-family: "Share Tech", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
 }
+
+h1 {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.marquee {
+  box-sizing: border-box;
+  line-height: 2em;
+  padding: 20px;
+  z-index: -5;
+
+}
+
+.marquee p {
+  display: block;
+  padding-left: 100%;
+  font-size: 1.2em;
+  color: black;
+  border: 3px solid black;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  z-index: -5;
+  background-color: white;
+}
+
+.vitesse1 {
+  animation: scroll-left 20s linear infinite;
+}
+
+.vitesse2 {
+  animation: scroll-left 10s linear infinite;
+}
+
+.vitesse3 {
+  animation: scroll-left 30s linear infinite;
+}
+
+.texteDefileRouge {
+  border: 3px solid red;
+  box-shadow: 8px -2px 0 2px red;
+}
+
+.texteDefileVert {
+  border: 3px solid green;
+  box-shadow: 8px -2px 0 1px green;
+}
+
+.texteDefileBleu {
+  border: 3px solid blue;
+  box-shadow: 8px -2px 0 1px blue;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(-600%);
+  }
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
+.boutonKaomoji {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #000000;
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+  font-size: 4em;
+}
+
 
 
 .fondH3Swiper {
@@ -16,6 +124,8 @@ p {
 
 .swiper {
   width: 30%;
+  max-width: 600px;
+  min-width: 400px;
   height: 100%;
   margin: auto;
   margin-bottom: 20px;
@@ -42,6 +152,10 @@ p {
 
 }
 
+.card-img-top {
+  height: 300px;
+  width: auto;
+}
 
 .sectionMenu {
   display: flex;
@@ -94,26 +208,54 @@ p {
   box-shadow: 0 0 0 6px blue;
 }
 
+.btnMenu.contactBtn:hover {
+  color: rgb(219, 141, 24);
+  border-color: rgb(255, 166, 0);
+  box-shadow: 0 0 0 6px rgb(255, 170, 13);
+}
+
+
+
+
 
 .sectionIntro {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items:center;
+  align-items: center;
   margin: 20px;
 }
+
+.sectionProjets {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+}
+
+.sectionCompetences {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+}
+
 
 .sectionContact {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
-  align-items:center;
+  align-items: center;
   margin: 20px;
 }
 
+
+
+
 .blocIntro {
-  max-width: 800px;
-  width: 90%;
+  height: 300px;
   border: 4px solid #000000;
   background-color: white;
   padding: 10px;
@@ -130,17 +272,21 @@ p {
 }
 
 .blocMessageProjet {
-  width: 30%;
+  max-width: 800px;
+  max-height: 500px;
+  width: 90%;
   border: 4px solid #000000;
   background-color: white;
   padding: 10px;
+  margin: 20px;
 }
 
 .blocMaPhoto {
+  aspect-ratio: 1/1.5;
+  max-width: 300px;
   background-color: white;
   box-shadow: -7px -6px 0 1px black;
   border: 3px solid black;
-  width: auto;
 }
 
 .blocTexte {
@@ -150,14 +296,6 @@ p {
 
 .blocTexte p {
   color: white;
-  font-size: 22px;
-}
-
-h1 {
-  font-size: 82px;
-  font-family: 'Anime Ace', sans-serif;
-  color: #FFD700;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .icone {
@@ -166,14 +304,43 @@ h1 {
 }
 
 
-@media screen and (max-width: 768px) {
-  .sectionContact {
+
+
+
+@media screen and (max-width: 968px) {
+
+  .marquee {
+    display: none;
+  }
+
+
+  .boutonKaomoji {
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sectionIntro {
     flex-direction: column;
     align-items: center;
     margin: 10px;
   }
 
-  .sectionIntro {
+  .sectionProjets {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .sectionCompetences {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .sectionContact {
     flex-direction: column;
     align-items: center;
     margin: 10px;
@@ -186,31 +353,22 @@ h1 {
   }
 
   .blocIntro {
-    width: 90%;
+    height: 390px;
     margin: 10px;
     padding: 15px;
   }
 
   .blocMessage {
-    width: 90%;
-    margin: 10px;
-    padding: 15px;
-  }
-
-  .blocMessageProjet {
-    width: 90%;
     margin: 10px;
     padding: 15px;
   }
 
   .blocMaPhoto {
-    width: 80%;
     margin: 10px;
   }
 
   .swiper {
-    width: 90%;
-    height: auto;
+    width: 80vw;
     margin: 20px auto;
   }
 
@@ -219,9 +377,66 @@ h1 {
   }
 
   .sectionMenu {
-    flex-direction:column;
-    align-items:stretch;
+    flex-direction: column;
+    align-items: stretch;
   }
 
+.background1 {
+  transition: opacity 0.5s ease;
+}
 
+.background2 {
+  transition: opacity 0.5s ease;
+}
+
+.background3 {
+  transition: opacity 0.5s ease;
+}
+
+.background4 {
+  transition: opacity 0.5s ease;
+}
+
+
+
+}
+
+
+.dark body {
+  background-color: #111;
+  color: white;
+}
+
+body.dark .blocMessage {
+  background-color: #222;
+  color: white;
+  box-shadow: -7px -6px 0 1px white;
+  border: 3px solid white;
+}
+
+body.dark .blocMessageProjet {
+  background-color: #222;
+  color: white;
+  border: 3px solid white;
+}
+
+body.dark .blocIntro {
+  background-color: #222;
+  color: white;
+  border: 3px solid white;
+}
+
+body.dark .titreSection {
+  background-color: #222;
+  color: white;
+  box-shadow: -7px -6px 0 1px white;
+  border: 3px solid white;
+}
+
+body.dark .blocMaPhoto {
+  aspect-ratio: 1/1.5;
+  max-width: 300px;
+  background-color: white;
+  box-shadow: -7px -6px 0 1px white;
+  border: 3px solid white;
 }
