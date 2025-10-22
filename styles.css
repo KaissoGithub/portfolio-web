@@ -2,7 +2,7 @@ body {
   background-image: url("./assets/img/backIntro2.png");
   background-repeat: repeat;
   background-size: auto;
-  animation: backgroundDefilement 30s linear infinite;
+  animation: backgroundDefilement 120s linear infinite;
 
 }
 
@@ -12,6 +12,21 @@ body {
   font-style: normal;
 }
 
+
+.backgroundSombreR {
+  background-color: #a7000021;
+  z-index: 5;
+}
+
+.backgroundSombreG {
+  background-color: #00a71621;
+  z-index: 1;
+}
+
+.backgroundSombreB {
+  background-color: #1100a721;
+  z-index: 1;
+}
 
 @keyframes backgroundDefilement {
   from {
@@ -149,8 +164,52 @@ h2 {
   text-align: center;
   box-shadow: -30px -3px 0 3px black;
   margin-bottom: 20px;
-
 }
+
+.titreSectionEclipse {
+  background-color: rgb(240, 151, 151);
+  border: 3px solid black;
+  text-align: center;
+  box-shadow: -10px -1px 0 1px black;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.projets {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titreSectionBandit {
+  background-color: rgb(151, 240, 155);
+  border: 3px solid black;
+  text-align: center;
+  box-shadow: -10px -1px 0 1px black;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.titreSectionMachine {
+  background-color: rgb(151, 175, 240);
+  border: 3px solid black;
+  text-align: center;
+  box-shadow: -10px -1px 0 1px black;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.titreSectionProf {
+  background-color: rgb(240, 198, 151);
+  border: 3px solid black;
+  text-align: center;
+  box-shadow: -10px -1px 0 1px black;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
 
 .card-img-top {
   height: 300px;
