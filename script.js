@@ -1,3 +1,4 @@
+let fond = "./assets/img/backIntro2.png";
 
 const { createApp } = Vue;
 
@@ -26,12 +27,17 @@ createApp({
     toggleDark() {
       this.dark = !this.dark;
       document.body.classList.toggle('dark', this.dark);
+
+      if (this.dark) {
+        fond = "./assets/img/backintro_dark.png";
+      } else {
+        fond = "./assets/img/backIntro2.png";
+      }
+
+      document.body.style.backgroundImage = `url('${fond}')`;
     }
   },
-
-})
-
-  .mount('#app');
+}).mount('#app');
 
 
 
@@ -53,43 +59,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to("body", {
-  backgroundImage: "url('./assets/img/gris.png')",
-  scrollTrigger: {
-    trigger: ".sectionIntro",
-    start: "top center",
-    end: "bottom center",
-    scrub: true,
+ScrollTrigger.create({
+  trigger: ".sectionIntro",
+  start: "top center",
+  end: "bottom center",
+  scrub: true,
+  onEnter: () => { // code exécuté lorsqu'on rentre dans la section
+    if (!document.body.classList.contains("dark")) { // s'il ne contient pas dark, on met le background de base
+      document.body.style.backgroundImage = "url('./assets/img/gris.png')";
+    }
   },
+  onEnterBack: () => { // code exécuté lorsqu'on sort de la section, je l'ai mis pour être sûr de passer au background light et éviter les bugs
+    if (!document.body.classList.contains("dark")) {
+      document.body.style.backgroundImage = "url('./assets/img/gris.png')";
+    }
+  }
 });
 
-gsap.to("body", {
-  backgroundImage: "url('./assets/img/rouge.png')",
-  scrollTrigger: {
-    trigger: ".sectionProjets",
-    start: "top center",
-    end: "bottom center",
-    scrub: true,
+ScrollTrigger.create({
+  trigger: ".sectionProjets",
+  start: "top center",
+  end: "bottom center",
+  scrub: true,
+  onEnter: () => { // code exécuté lorsqu'on rentre dans la section
+    if (!document.body.classList.contains("dark")) { // s'il ne contient pas dark, on met le background rouge light
+      document.body.style.backgroundImage = "url('./assets/img/rouge.png')";
+    }
   },
+  onEnterBack: () => {
+    if (!document.body.classList.contains("dark")) {  // code exécuté lorsqu'on sort de la section, je l'ai mis pour être sûr de passer au background light et éviter les bugs
+      document.body.style.backgroundImage = "url('./assets/img/rouge.png')";
+    }
+  }
 });
 
-gsap.to("body", {
-  backgroundImage: "url('./assets/img/violet.png')",
-  scrollTrigger: {
-    trigger: ".sectionCompetences",
-    start: "top center",
-    end: "bottom center",
-    scrub: true,
+ScrollTrigger.create({
+  trigger: ".sectionCompetences",
+  start: "top center",
+  end: "bottom center",
+  scrub: true,
+  onEnter: () => { // code exécuté lorsqu'on rentre dans la section
+    if (!document.body.classList.contains("dark")) { // s'il ne contient pas dark, on met le background violet light
+      document.body.style.backgroundImage = "url('./assets/img/violet.png')";
+    }
   },
+  onEnterBack: () => {
+    if (!document.body.classList.contains("dark")) {  // code exécuté lorsqu'on sort de la section, je l'ai mis pour être sûr de passer au background light et éviter les bugs
+      document.body.style.backgroundImage = "url('./assets/img/violet.png')";
+    }
+  }
 });
 
-gsap.to("body", {
-  backgroundImage: "url('./assets/img/vert.png')",
-  scrollTrigger: {
-    trigger: ".sectionContact",
-    start: "top bottom",
-    end: "bottom bottom",
-    scrub: true,
+ScrollTrigger.create({
+  trigger: ".sectionContact",
+  start: "top center",
+  end: "bottom center",
+  scrub: true,
+  onEnter: () => { // code exécuté lorsqu'on rentre dans la section
+    if (!document.body.classList.contains("dark")) { // s'il ne contient pas dark, on met le background vert light
+      document.body.style.backgroundImage = "url('./assets/img/vert.png')";
+    }
   },
+  onEnterBack: () => {
+    if (!document.body.classList.contains("dark")) {  // code exécuté lorsqu'on sort de la section, je l'ai mis pour être sûr de passer au background light et éviter les bugs
+      document.body.style.backgroundImage = "url('./assets/img/vert.png')";
+    }
+  }
 });
-
