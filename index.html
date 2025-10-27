@@ -23,11 +23,11 @@
         <div class="sectionMenu">
             <div class="menu">
                 <div class="menuIcone"><img src="./assets/img/iconeMenu.png"></div>
-                <a href="" class="btnMenu presentationBtn">Présentation</a>
-                <a href="" class="btnMenu projetBtn">Projets</a>
-                <a href="" class="btnMenu competenceBtn">Compétences</a>
-                <a href="" class="btnMenu contactBtn">Contact</a>
-                <button @click="toggleDark" class="btn-darkmode">
+                <a href="#intro" class="btnMenu presentationBtn">Présentation</a>
+                <a href="#projets" class="btnMenu projetBtn">Projets</a>
+                <a href="#competences" class="btnMenu competenceBtn">Compétences</a>
+                <a href="#contact" class="btnMenu contactBtn">Contact</a>
+                <button @click="toggleSombre" class="btn-darkmode">
                     🌙
                 </button>
             </div>
@@ -35,6 +35,7 @@
             <div class="sectionBanniereTop">
 
                 <button @click="inverse" class="boutonKaomoji" :class="{ 'flip-horizontal': flipped }">ᕕ( ᐛ )ᕗ</button>
+                <!--On click, on -->
 
             </div>
             <div class="marquee">
@@ -47,16 +48,8 @@
 
         </div>
 
-        <div class="backgroundSombreR">
-        </div>
 
-        <div class="backgroundSombreG">
-        </div>
-
-        <div class="backgroundSombreR">
-        </div>
-
-        <div class="titreSection">
+        <div class="titreSection" id="intro">
             <h2>Qui suis-je</h2>
         </div>
 
@@ -76,7 +69,7 @@
             <img src="./assets/img/moi.jpg" class="blocMaPhoto">
         </div>
 
-        <div class="titreSection">
+        <div class="titreSection" id="projets">
             <h2>Mes projets</h2>
         </div>
 
@@ -127,8 +120,14 @@
                 <img class="galerieImg" src="./assets/img/projetVr2.png" alt="">
                 <img class="galerieImg" src="./assets/img/projetVr3.png" alt="">
             </div>
+
             <div class="blocMessage2">
-                <p>Un jeu en réalité virtuelle développé sur unity inspiré sur le célèbre jeu rétro "frogger", nous devons traverser la rue et éviter de se faire écraser par des voitures.</p>
+                <p>Conçu sur Unity directement, ce jeu en réalité virtuelle et également jouable avec l'OSC a été
+                    inspiré du célèbre jeu rétro "frogger", nous devons traverser la rue et éviter de se faire écraser
+                    par des voitures.
+
+                    En direct collaboration avec Rafael Angon Dubé et Thearylou Lach
+                </p>
             </div>
         </div>
 
@@ -143,7 +142,10 @@
                 <img class="galerieImg" src="./assets/img/projetMachine3.png" alt="">
             </div>
             <div class="blocMessage2">
-                <p>Une vidéo en stop motion que j'ai conçu avec mes collègues : x y z c , Jacques, 22 ans, découvre une machine à écrire énigmatique qui matérialise ses émotions les plus sombres. Confronté à ses peurs incarnées, il trouve la force de les affronter et quitte la pièce dans une lumière qui s’éteint doucement.</p>
+                <p>Une vidéo en stop motion que j'ai conçu avec mes collègues : Justin Monpetit, Radhouane Kordan, Félix
+                    Lavoie. <br> Jacques, 22 ans, découvre une machine à écrire énigmatique qui matérialise ses émotions
+                    les plus sombres. Confronté à ses peurs incarnées, il trouve la force de les affronter et quitte la
+                    pièce dans une lumière qui s’éteint doucement.</p>
             </div>
         </div>
 
@@ -154,11 +156,13 @@
 
             <div class="miniGalerieProjets">
                 <img class="galerieImg" src="./assets/img/projet-4.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetEclipse2.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetEclipse3.png" alt="">
+                <img class="galerieImg" src="./assets/img/projetProf2.png" alt="">
+                <img class="galerieImg" src="./assets/img/projetProf3.png" alt="">
             </div>
             <div class="blocMessage2">
-                <p>Un jeu marrant que j'ai développé pour taquiner un ami</p>
+                <p>La légende de Prof Chaos est un jeu de role tour par tour humoristique développé sur RPG Bakin, nous
+                    incarnons un protagoniste qui recherche "la personne qui a demandé" après avoir entendu plusieurs
+                    anecdotes sans intérêts d'un ami ayant le pseudonyme "professeur chaos". </p>
             </div>
         </div>
 
@@ -166,7 +170,7 @@
             <h2>Mes compétences</h2>
         </div>
 
-        <div class="sectionCompetences">
+        <div class="sectionCompetences" id="competences">
             <div class="blocMessage">
                 <h2>Mes compétences</h2>
                 <p>Je maîtrise plusieurs outils et logiciels liés à la création visuelle et au développement web :
@@ -186,7 +190,7 @@
             </div>
         </div>
 
-        <div class="titreSection">
+        <div class="titreSection" id="contact">
             <h2>Me contacter</h2>
         </div>
 

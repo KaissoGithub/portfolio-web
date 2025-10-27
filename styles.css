@@ -63,7 +63,7 @@ h2 {
   background-color: white;
 }
 
-.vitesse1 {
+.vitesse1 { /*défilement*/
   animation: scroll-left 20s linear infinite;
 }
 
@@ -90,7 +90,7 @@ h2 {
   box-shadow: 8px -2px 0 1px blue;
 }
 
-@keyframes scroll-left {
+@keyframes scroll-left { /*défilement*/
   0% {
     transform: translateX(200%);
   }
@@ -101,7 +101,7 @@ h2 {
 }
 
 .flip-horizontal {
-  transform: scaleX(-1);
+  transform: scaleX(-1); /* va littéralement "flip" l'élément */
 }
 
 .boutonKaomoji {
@@ -384,7 +384,7 @@ h2 {
 
 @media screen and (max-width: 968px) {
 
-  .marquee {
+  .marquee { /* defilement */
     display: none;
   }
 
@@ -472,6 +472,21 @@ h2 {
     transition: opacity 0.5s ease;
   }
 
+
+  .miniGalerieProjets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+
+.galerieImg {
+  width: 80%;
+  height: auto;
+  background-color: red;
+  border: 6px solid black;
+}
 
 
 }
