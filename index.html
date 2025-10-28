@@ -106,13 +106,14 @@
 
             <div class="blocMessage2">
                 <p>{{projets.description}}</p>
-            </div>
-
-            <div v-if="projets.lien" class="lienProjet">
+                            <div v-if="projets.lien" class="lienProjet">
                 <a :href="projets.lien" target="_blank">
                     Voir le projet →
                 </a>
             </div>
+            </div>
+
+
 
             <div v-if="projets.processus" class="processusCreation">
                 <h3>Processus de création</h3>
