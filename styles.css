@@ -24,6 +24,10 @@ body {
   }
 }
 
+a {
+  font-family: "Share Tech", sans-serif;
+}
+
 p {
   font-family: "Share Tech", sans-serif;
   font-weight: 300;
@@ -269,6 +273,24 @@ h4 {
   text-align: center;
   text-decoration: none;
 
+}
+
+.lienProjet {
+  display: block;
+  background-color: #000000;
+  border: 5px solid white;
+  outline: 5px solid black;
+  box-shadow: 0 0 0 6px white;
+  color: white;
+  padding: 15px 10px 15px 10px;
+  margin: 15px;
+  text-align: center;
+
+}
+
+.lienProjet a {
+  text-decoration: none;
+  color: white;
 }
 
 .btnMenu.presentationBtn:hover {

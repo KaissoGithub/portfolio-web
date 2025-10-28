@@ -8,7 +8,8 @@
       "./assets/img/projetEclipse2.png",
       "./assets/img/projetEclipse3.png"
     ],
-    "description": "Un court jeu de plateforme développé dans le cadre de mon cours d'intégration multimédia."
+    "description": "Un court jeu de plateforme développé via phaser dans le cadre de mon cours d'intégration multimédia.",
+    "lien": "https://donpatchi.itch.io/eclipse-hunter"
   },
   {
     "title": "Bandit VR",
@@ -19,7 +20,8 @@
       "./assets/img/projetVr2.png",
       "./assets/img/projetVr3.png"
     ],
-    "description": "Jeu en réalité virtuelle inspiré du célèbre jeu Frogger, jouable avec OSC."
+    "description": "Jeu en réalité virtuelle inspiré du célèbre jeu Frogger, jouable avec OSC. Ce projet a été fait en équipe avec Raphael Angon Dubé ainsi que Thearylou Lach",
+    "lien": "https://github.com/Rafael-ADube/unity_bandit-go/tree/main"
   },
   {
     "title": "La Machine",
@@ -30,50 +32,51 @@
       "./assets/img/projetMachine2.png",
       "./assets/img/projetMachine3.png"
     ],
-    "description": "Une vidéo en stop motion conçue avec mes collègues. Jacques découvre une machine à écrire mystérieuse..."
+    "description": "Une vidéo en stop motion conçue avec mes collègues. Jacques découvre une machine à écrire mystérieuse... Ce projet a été fait en équipe avec Justin Monpetit Radhouane Kordan, Félix Lavoie",
+    "lien": "https://youtu.be/1P9nsghhglc"
   },
-{
-  "title": "Prof Chaos",
-  "category": "RPG humoristique",
-  "classTitre": "titreSectionProf",
-  "images": [
-    "./assets/img/projet-4.png",
-    "./assets/img/projetProf2.png",
-    "./assets/img/projetProf3.png"
-  ],
-  "description": "Un jeu de rôle humoristique développé sur RPG Bakin, inspiré du personnage Professeur Chaos.",
-  "processus": [
-    {
-      "titre": "Création du projet et conception de la carte",
-      "texte": "En premier lieu, nous créons le projet et concevons la carte du jeu.",
-      "image": "./assets/img/processusCreation1.png"
-    },
-    {
-      "titre": "Mise en place des événements",
-      "texte": "Ensuite, nous devons procéder à la mise en place des événements qui rythmeront le jeu.",
-      "image": "./assets/img/processusCreation2.png"
-    },
-    {
-      "titre": "Rédaction du scénario et des dialogues",
-      "texte": "Nous écrivons le script principal du jeu ainsi que les divers dialogues entre les personnages.",
-      "image": "./assets/img/processusCreation3.png"
-    },
-    {
-      "titre": "Tests des combats",
-      "texte": "Nous réalisons des tests approfondis des combats pour assurer un bon équilibre du gameplay.",
-      "image": "./assets/img/processusCreation4.png"
-    },
-    {
-      "titre": "Création des boss",
-      "texte": "Enfin, nous créons les boss que les joueurs devront affronter à la fin de chaque niveau ou chapitre.",
-      "image": "./assets/img/processusCreation5.png"
-    },
-    {
-      "titre": "Derniers ajustements",
-      "texte": "Quelques ajustements visuels et techniques sont apportés avant la version finale.",
-      "image": "./assets/img/processusCreation6.png"
-    }
-  ]
-}
-
+  {
+    "title": "Prof Chaos",
+    "category": "RPG humoristique",
+    "classTitre": "titreSectionProf",
+    "images": [
+      "./assets/img/projet-4.png",
+      "./assets/img/projetProf2.png",
+      "./assets/img/projetProf3.png"
+    ],
+    "description": "Un jeu humoristique développé sur RPG Bakin, afin de taquiner un ami ayant pour pseudonyme 'Professeur Chaos'.",
+    "lien": "https://vimeo.com/1131137885",
+    "processus": [
+      {
+        "titre": "Création du projet et conception de la carte",
+        "texte": "En premier lieu, nous créons le projet et concevons la carte du jeu.",
+        "image": "./assets/img/processusCreation1.png"
+      },
+      {
+        "titre": "Mise en place des événements",
+        "texte": "Ensuite, nous devons procéder à la mise en place des événements qui rythmeront le jeu.",
+        "image": "./assets/img/processusCreation2.png"
+      },
+      {
+        "titre": "Rédaction du scénario et des dialogues",
+        "texte": "Nous écrivons le script principal du jeu ainsi que les divers dialogues entre les personnages.",
+        "image": "./assets/img/processusCreation3.png"
+      },
+      {
+        "titre": "Tests des combats",
+        "texte": "Nous réalisons des tests approfondis des combats pour assurer un bon équilibre du gameplay.",
+        "image": "./assets/img/processusCreation4.png"
+      },
+      {
+        "titre": "Création des boss",
+        "texte": "Enfin, nous créons les boss que les joueurs devront affronter à la fin de chaque niveau ou chapitre.",
+        "image": "./assets/img/processusCreation5.png"
+      },
+      {
+        "titre": "Derniers ajustements",
+        "texte": "Quelques ajustements visuels et techniques sont apportés avant la version finale.",
+        "image": "./assets/img/processusCreation6.png"
+      }
+    ]
+  }
 ]
