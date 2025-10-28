@@ -28,14 +28,13 @@
                 <a href="#competences" class="btnMenu competenceBtn">Compétences</a>
                 <a href="#contact" class="btnMenu contactBtn">Contact</a>
                 <button @click="toggleSombre" class="btn-darkmode">
-                    🌙
+                    🌜🌞
                 </button>
             </div>
 
             <div class="sectionBanniereTop">
 
                 <button @click="inverse" class="boutonKaomoji" :class="{ 'flip-horizontal': flipped }">ᕕ( ᐛ )ᕗ</button>
-                <!--On click, on -->
 
             </div>
             <div class="marquee">
@@ -76,9 +75,10 @@
         <div class="sectionProjets">
             <div class="swiper mySwiper fondH3Swiper">
                 <div class="swiper-wrapper">
-
-                    <div class="swiper-slide" v-for="projets in project"><img class="card-img-top"
-                            :src="projets.images">
+                    <div class="swiper-slide" v-for="projets in project" :key="projets.title">
+                        <!--Simple boucle v-for qui va chercher les informations du tableau "projet" dans le script.js-->
+                        <img class="card-img-top" :src="projets.images[0]">
+                        <!--V-bind dans le contenant des images pour charger les images du projects.json-->
                         <h3>{{projets.title}}</h3>
                         <p>{{projets.category}}</p>
                     </div>
@@ -87,84 +87,38 @@
 
             <div class="blocMessageProjet">
                 <h2>Mes projets</h2>
-                <p>J'aime explorer différents styles et techniques dans mes projets, qu'il s'agisse de montage
-                    vidéo,
+                <p>J'aime explorer différents styles et techniques dans mes projets, qu'il s'agisse de montage vidéo,
                     d'animation ou de conception visuelle. Chaque projet me permet de repousser mes limites et
                     d'apprendre de nouvelles façons de raconter une histoire à travers l'image et le son.</p><br>
-                <p>Une sélection de mes réalisations sera bientôt présentée ici.</p>
+                <p>Une sélection de mes réalisations est présentée ci-dessous.</p>
             </div>
         </div>
 
-        <div class="projets">
-            <div class="titreSectionEclipse">
-                <h2>Eclipse Hunter</h2>
+
+        <div class="projets" v-for="projets in project" :key="projets.title">
+            <div :class="projets.classTitre">
+                <h2>{{projets.title}}</h2>
             </div>
 
             <div class="miniGalerieProjets">
-                <img class="galerieImg" src="./assets/img/projet-1.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetEclipse2.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetEclipse3.png" alt="">
-            </div>
-            <div class="blocMessage2">
-                <p>Un court jeu de plateforme développé dans le cadre de mon cours d'intégration multimédia</p>
-            </div>
-        </div>
-
-        <div class="projets">
-            <div class="titreSectionBandit">
-                <h2>Bandit</h2>
-            </div>
-
-            <div class="miniGalerieProjets">
-                <img class="galerieImg" src="./assets/img/projet-2.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetVr2.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetVr3.png" alt="">
+                <img v-for="(image, index) in projets.images" :key="index" class="galerieImg" :src="image" alt="">
             </div>
 
             <div class="blocMessage2">
-                <p>Conçu sur Unity directement, ce jeu en réalité virtuelle et également jouable avec l'OSC a été
-                    inspiré du célèbre jeu rétro "frogger", nous devons traverser la rue et éviter de se faire écraser
-                    par des voitures.
+                <p>{{projets.description}}</p>
+            </div>
 
-                    En direct collaboration avec Rafael Angon Dubé et Thearylou Lach
-                </p>
+            <div v-if="projets.processus" class="processusCreation">
+                <h3>Processus de création</h3>
+
+                <div class="etapeProcessus" v-for="(etape, index) in projets.processus" :key="index">
+                    <h4>{{etape.titre}}</h4>
+                    <p>{{etape.texte}}</p>
+                    <img :src="etape.image" alt="" class="imageProcessus">
+                </div>
             </div>
         </div>
 
-        <div class="projets">
-            <div class="titreSectionMachine">
-                <h2>Machine</h2>
-            </div>
-
-            <div class="miniGalerieProjets">
-                <img class="galerieImg" src="./assets/img/projet-3.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetMachine2.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetMachine3.png" alt="">
-            </div>
-            <div class="blocMessage2">
-                <p>Une vidéo en stop motion que j'ai conçu avec mes collègues : Justin Monpetit, Radhouane Kordan, Félix
-                    Lavoie. <br> Jacques, 22 ans, découvre une machine à écrire énigmatique qui matérialise ses émotions
-                    les plus sombres. Confronté à ses peurs incarnées, il trouve la force de les affronter et quitte la
-                    pièce dans une lumière qui s'éteint doucement.</p>
-            </div>
-        </div>
-
-        <div class="projets">
-            <div class="titreSectionProf">
-                <h2>Prof</h2>
-            </div>
-
-            <div class="miniGalerieProjets">
-                <img class="galerieImg" src="./assets/img/projet-4.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetProf2.png" alt="">
-                <img class="galerieImg" src="./assets/img/projetProf3.png" alt="">
-            </div>
-            <div class="blocMessage2">
-                <p>La légende de Prof Chaos est un jeu de role tour par tour humoristique développé sur RPG Bakin, nous
-                    incarnons un protagoniste qui recherche "la personne qui a demandé" après avoir entendu plusieurs
-                    anecdotes sans intérêts d'un ami ayant le pseudonyme "professeur chaos". </p>
-            </div>
-        </div>
 
         <div class="titreSection">
             <h2>Mes compétences</h2>

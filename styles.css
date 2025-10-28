@@ -42,6 +42,20 @@ h2 {
   font-style: normal;
 }
 
+h3 {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4 {
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
 .marquee {
   box-sizing: border-box;
   line-height: 2em;
@@ -378,7 +392,45 @@ h2 {
   width: auto;
 }
 
+.processusCreation {
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
 
+.processusCreation h3 {
+  text-align: center;
+  background-color: rgb(216, 216, 216);
+  border: 3px solid black;
+  text-align: center;
+  box-shadow: -10px -1px 0 1px black;
+}
+
+.etapeProcessus {
+  text-align: center;
+  background-color: rgb(216, 216, 216);
+  border: 3px solid black;
+  text-align: center;
+  box-shadow: -10px -1px 0 1px black;
+  margin-bottom: 20px;
+}
+
+.etapeProcessus h4 {
+  display: block;
+  background-color: #000000;
+  border: 5px solid white;
+  outline: 5px solid black;
+  box-shadow: 0 0 0 6px white;
+  color: white;
+  padding: 15px 10px 15px 10px;
+  margin: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.imageProcessus {
+  width: 80%;
+  border: 6px solid black;
+}
 
 
 
@@ -388,6 +440,9 @@ h2 {
     display: none;
   }
 
+  .imageProcessus {
+  width: 100%;
+}
 
   .boutonKaomoji {
     margin: 0px;
@@ -396,6 +451,10 @@ h2 {
     justify-content: center;
     align-items: center;
   }
+
+
+
+
 
   .sectionIntro {
     flex-direction: column;
@@ -484,7 +543,6 @@ h2 {
 .galerieImg {
   width: 80%;
   height: auto;
-  background-color: red;
   border: 6px solid black;
 }
 
@@ -534,3 +592,13 @@ body.dark .blocMaPhoto {
   border: 3px solid white;
 }
 
+body.dark .projets {
+    border: rgb(172, 172, 172) solid 2px;  
+    box-shadow: none;
+  }
+
+  body.dark .boutonKaomoji {
+    background-color: #222;
+    color: white;
+    border: solid 2px white;
+  }
