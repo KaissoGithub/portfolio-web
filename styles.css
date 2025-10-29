@@ -410,10 +410,6 @@ h4 {
   color: white;
 }
 
-.icone {
-  height: 50px;
-  width: auto;
-}
 
 .processusCreation {
   margin: 20px;
@@ -539,7 +535,7 @@ h4 {
   }
 
   .background1 {
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease; /*animation simple où l'opacité transitionne au prochain background en 0.5 seconde avec le mode "ease"*/
   }
 
   .background2 {

@@ -86,8 +86,8 @@
             </div>
         </div>
 
-
-        <div class="projets" v-for="projets in project"> <!--Boucle qui parcours tout mes éléments de projets présents dans mon tableau, -->
+<!--Le :key="index" est recommandé dans le but d'optimiser les performances de vue.js, sans cette dernière le projet fonctionne toujours, mais est plus susceptible de rencontrer des problèmes-->
+        <div class="projets" v-for="projets in project" :key="index"> <!--Boucle qui parcours tout mes éléments de projets présents dans mon tableau, -->
             <div :class="projets.classTitre"> <!--v-bind de "classTitre" dans le .json, elle donne les classes css appropriées aux couleurs des titres, par exemple titreSectionBandit qui est vert, ect-->
                 <h2>{{projets.title}}</h2>
             </div>
@@ -111,10 +111,10 @@
                 <h3>Processus de création</h3>
 
                 <!--on applique la classe etapeProcessus, pour chacun -->
-                <div class="etapeProcessus" v-for="(etape, index) in projets.processus" :key="index">
+                <div class="etapeProcessus" v-for="(etape, index) in projets.processus" :key="index"> <!--Boucle qui parcours tout mes éléments de projets présents dans mon tableau, on applique le titre du processus en question présent dans le .json -->
                     <h4>{{etape.titre}}</h4>
                     <p>{{etape.texte}}</p>
-                    <img :src="etape.image" class="imageProcessus">
+                    <img :src="etape.image" class="imageProcessus"> <!--V-bind où l'image présent dans .json est appliqué à chaque parties du processus-->
                 </div>
             </div>
         </div>
