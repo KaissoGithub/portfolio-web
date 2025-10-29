@@ -110,6 +110,7 @@
             <div v-if="projets.processus" class="processusCreation"> <!--Si le projet contient un tableau processus, on applique le style "processusCreation"-->
                 <h3>Processus de création</h3>
 
+                <!--on applique la classe etapeProcessus, pour chacun -->
                 <div class="etapeProcessus" v-for="(etape, index) in projets.processus" :key="index">
                     <h4>{{etape.titre}}</h4>
                     <p>{{etape.texte}}</p>
