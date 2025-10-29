@@ -279,7 +279,7 @@ h4 {
   display: block;
   background-color: #000000;
   border: 5px solid white;
-  outline: 5px solid black;
+  outline: 5px solid rgb(0, 0, 0);
   box-shadow: 0 0 0 6px white;
   color: white;
   padding: 15px 10px 15px 10px;
