@@ -55,14 +55,8 @@
         <div class="sectionIntro">
             <div class="blocIntro">
                 <h2>Qui suis-je</h2>
-                <p>Je m'appelle Ahmed K. Je suis passionné par le montage vidéo et tout ce qui touche à la création
-                    visuelle. J'aime donner vie aux idées à travers le rythme, la musique et le visuel.</p>
-                <p>Mon objectif est de trouver un stage dans un studio créatif, dans une équipe où la collaboration
-                    et
-                    la
-                    créativité sont au cœur des projets. Je veux apprendre, expérimenter et perfectionner mes
-                    techniques
-                    de montage dans un environnement stimulant.</p>
+                <p>Je m'appelle Ahmed K. Étant un grand passionné de jeux vidéo, il est normal que j'aime également en concevoir. La plupart des projets présents dans ce portfolio sont des jeux que j'ai eu la chance de développer en cours et chez moi ! Une autre chose que j'ai à cœur est de participer à des projets créatifs tels que les montages vidéo ou les designs divers et variés.</p>
+                <p>Mon objectif est de trouver un stage dans un studio créatif et vivant où je pourrais grandir, idéalement en montage vidéo.</p>
             </div>
 
             <img src="./assets/img/moi.jpg" class="blocMaPhoto">
@@ -87,41 +81,39 @@
 
             <div class="blocMessageProjet">
                 <h2>Mes projets</h2>
-                <p>J'aime explorer différents styles et techniques dans mes projets, qu'il s'agisse de montage vidéo,
-                    d'animation ou de conception visuelle. Chaque projet me permet de repousser mes limites et
-                    d'apprendre de nouvelles façons de raconter une histoire à travers l'image et le son.</p><br>
+                <p>Chacun des projets présents ici a été réalisé dans un cadre académique ou d'apprentissage personnel. J'ai consacré un temps considérable à chacun d'entre eux et, à chaque fois, j'ai pu évoluer en tant que créateur de contenu.</p><br>
                 <p>Une sélection de mes réalisations est présentée ci-dessous.</p>
             </div>
         </div>
 
 
-        <div class="projets" v-for="projets in project" :key="projets.title">
-            <div :class="projets.classTitre">
+        <div class="projets" v-for="projets in project"> <!--Boucle qui parcours tout mes éléments de projets présents dans mon tableau, -->
+            <div :class="projets.classTitre"> <!--v-bind de "classTitre" dans le .json, elle donne les classes css appropriées aux couleurs des titres, par exemple titreSectionBandit qui est vert, ect-->
                 <h2>{{projets.title}}</h2>
             </div>
 
             <div class="miniGalerieProjets">
-                <img v-for="(image, index) in projets.images" :key="index" class="galerieImg" :src="image" alt="">
+                <img v-for="(image, index) in projets.images" :key="index" class="galerieImg" :src="image"> <!--Boucle sur le tableau "image" dans le .json à partir de l'index comme position. L'image est défini dynamiquement la-->
             </div>
 
             <div class="blocMessage2">
                 <p>{{projets.description}}</p>
-                            <div v-if="projets.lien" class="lienProjet">
-                <a :href="projets.lien" target="_blank">
-                    Voir le projet →
-                </a>
+                <div v-if="projets.lien" class="lienProjet"> <!--si lienProjet, on applique le style associé -->
+                    <a :href="projets.lien" target="_blank">
+                        Voir le projet →
+                    </a>
+                </div>
             </div>
-            </div>
 
 
 
-            <div v-if="projets.processus" class="processusCreation">
+            <div v-if="projets.processus" class="processusCreation"> <!--Si le projet contient un tableau processus, on applique le style "processusCreation"-->
                 <h3>Processus de création</h3>
 
                 <div class="etapeProcessus" v-for="(etape, index) in projets.processus" :key="index">
                     <h4>{{etape.titre}}</h4>
                     <p>{{etape.texte}}</p>
-                    <img :src="etape.image" alt="" class="imageProcessus">
+                    <img :src="etape.image" class="imageProcessus">
                 </div>
             </div>
         </div>
@@ -142,12 +134,7 @@
                     • Autodesk Maya 3D<br>
                     • Reaper<br>
                     • Adobe Photoshop<br>
-                    • Figma</p><br>
-                <p>En plus de mes compétences techniques, je mets beaucoup d'importance sur le travail d'équipe et
-                    la
-                    créativité. J'aime collaborer, partager des idées et participer activement à la création d'un
-                    projet
-                    collectif.</p>
+                    • Figma</p>
             </div>
         </div>
 
@@ -158,9 +145,8 @@
         <div class="sectionContact">
             <div class="blocMessage">
                 <h2>Contact</h2><br>
-                <p>Ahmed K</p>
+                <p>Ahmed Kaissoumi</p>
                 <p>Courriel : <a href="mailto:Ahmedkaissoumi@gmail.com">Ahmedkaissoumi@gmail.com</a></p>
-                <p>Téléphone : 438-xxx-xxxx</p><br>
                 <p>Je suis toujours ouvert à discuter de nouveaux projets ou collaborations. N'hésitez pas à me
                     contacter pour toute question ou opportunité !</p>
             </div>

@@ -8,7 +8,7 @@
       "./assets/img/projetEclipse2.png",
       "./assets/img/projetEclipse3.png"
     ],
-    "description": "Un court jeu de plateforme développé via phaser dans le cadre de mon cours d'intégration multimédia.",
+    "description": "Un court jeu de plateforme développé sur phaser dans le cadre de mon cours d'intégration multimédia. Nous incarnons un chevalier dans un montre rétro furitiste qui devra affronter le grand méchant boss qui invoque des 'slimes' sur toute la carte. Dans ce projet, j'ai conçu l'intégralité de la carte grâce au logiciel 'tiled', du design visuel et sonore en réutilisant des assets gratuits et libres de droits, ainsi que le code du jeu via Phaser. J'ai également été en charge.. du cahier de charges du projet. J'ai dû évaluer ce qui était possible ou non, et au fil du temps paufiner mon projet afin de respecter les délais.",
     "lien": "https://donpatchi.itch.io/eclipse-hunter"
   },
   {
@@ -20,7 +20,7 @@
       "./assets/img/projetVr2.png",
       "./assets/img/projetVr3.png"
     ],
-    "description": "Jeu en réalité virtuelle inspiré du célèbre jeu Frogger, jouable avec OSC. Ce projet a été fait en équipe avec Raphael Angon Dubé ainsi que Thearylou Lach",
+    "description": "Jeu en réalité virtuelle inspiré du célèbre jeu Frogger, jouable avec OSC. Ce projet a été réalisé en équipe avec Raphaël Angon Dubé ainsi que Thearylou Lach. J'ai été en charge d'une grande partie de la programmation ainsi que de la conception complète de la carte du jeu, Raphael quant à lui s'est occupé d'un processus de conception des idées ainsi qu'une partie de la programmation, Thearylou s'est occupé de la partie OSC et d'une partie de la programmation également. Le tout a été développé sur Unity et TouchDesigner, et le projet a été encadré par notre professeur Loras Boisvert en Réalité Mixte.",
     "lien": "https://github.com/Rafael-ADube/unity_bandit-go/tree/main"
   },
   {
@@ -32,7 +32,7 @@
       "./assets/img/projetMachine2.png",
       "./assets/img/projetMachine3.png"
     ],
-    "description": "Une vidéo en stop motion conçue avec mes collègues. Jacques découvre une machine à écrire mystérieuse... Ce projet a été fait en équipe avec Justin Monpetit Radhouane Kordan, Félix Lavoie",
+    "description": "Une vidéo en stop motion où le protagoniste, Jacque, découvre une machine à écrire mystérieuse... Ce projet a été réalisé en équipe avec Justin Monpetit, Radhouane Kordan et Félix Lévesque. Nous avons utilisé le logiciel Dragonframe pour le stop motion, DaVinci pour le montage vidéo, After Effects pour les animations 2D, Illustrator pour l'illustration 2D et Reaper pour la création sonore. On a tous travaillé de manière égale dans chacun des processus de créations, cependant l'acteur principal de la vidéo est Justin Montpetit.",
     "lien": "https://youtu.be/1P9nsghhglc"
   },
   {
@@ -44,7 +44,7 @@
       "./assets/img/projetProf2.png",
       "./assets/img/projetProf3.png"
     ],
-    "description": "Un jeu humoristique développé sur RPG Bakin, afin de taquiner un ami ayant pour pseudonyme 'Professeur Chaos'.",
+    "description": "Un jeu RPG humoristique développé sur RPG Bakin, conçu pour taquiner un ami portant le pseudonyme 'Professeur Chaos'. À la suite d'une anecdote complètement anodine racontée par 'profchaos', le protagoniste du jeu part à la recherche de la personne ayant 'demandé'. L'intégralité des assets provient du moteur. La création du jeu a été réalisée en programmant 'visuellement', à l'aide d'un système proposé par l'engine.",
     "lien": "https://vimeo.com/1131137885",
     "processus": [
       {
